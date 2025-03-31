@@ -1,0 +1,32 @@
+{
+  "id": "6902bde4-1712-44e7-a12b-d00f000126ef",
+  "name": "ALProject12",
+  "publisher": "AL beginer",
+  "version": "1.0.0.0",
+  "brief": "Extension allows to register bonuses for customers.",
+  "description": "Extension allows to register bonuses for customers and generate reports for them.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://myNAVblog.com",
+  "logo": "res/wolflogo.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "25.0.0.0",
+  "idRanges": [
+    {
+      "from": 65400,
+      "to": 65600
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
