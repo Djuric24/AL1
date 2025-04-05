@@ -42,8 +42,8 @@ table 65400 "MNB Bonus Header"
         // Add changes to field groups here
     }
 
-    var
-        myInt: Integer;
+    // var
+    //     myInt: Integer;
 
     trigger OnInsert()
     begin
