@@ -6,6 +6,7 @@ page 65400 "MNB Bonus List"
     UsageCategory = Lists;
     SourceTable = "MNB Bonus Header";
     Editable = false;
+    CardPageId = "MNB Bonus Card";
 
     layout
     {
