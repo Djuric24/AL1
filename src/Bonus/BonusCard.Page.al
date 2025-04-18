@@ -39,6 +39,13 @@ page 65401 "MNB Bonus Card"
                     ToolTip = 'Specifies bonus status.';
                 }
 
+
+            }
+            part(Lines; "MNB Bonus Subform")
+            {
+                ApplicationArea = All;
+                Caption = 'Lines';
+                SubPageLink = "Document No." = field("No.");
             }
         }
     }
