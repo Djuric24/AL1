@@ -1,4 +1,4 @@
-pageextension 65400 "MNB Customer List" extends "Customer List"
+pageextension 65401 "MNB Customer List" extends "Customer List"
 {
     layout
     {

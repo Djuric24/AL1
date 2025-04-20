@@ -10,6 +10,15 @@ tableextension 65400 "MNB Customer" extends Customer
             Editable = false;
         }
     }
+    trigger OnBeforeDelete()
+    begin
+        TestBonusExists();
+    end;
+
+    var
+        AtLeastOneBonusForCustomerExistsErr: Label 'At least one bonus for customer %1 exists.', Comment = '%1 - customer name';
+
+    local procedure TestIfBonusExists()
 
     // keys
     // {
