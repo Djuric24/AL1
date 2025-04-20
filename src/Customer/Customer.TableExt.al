@@ -19,6 +19,13 @@ tableextension 65400 "MNB Customer" extends Customer
         AtLeastOneBonusForCustomerExistsErr: Label 'At least one bonus for customer %1 exists.', Comment = '%1 - customer name';
 
     local procedure TestIfBonusExists()
+    var
+        BonusHeader: Record "MNB Bonus Header";
+    begin
+        BonusHeader.SetRange("Customer No.", Rec."No.");
+        if not BonusHeader.IsEmpty then
+            Error(AtLeastOneBonusForCustomerExistsErr, Rec.Name);
+    end;
 
     // keys
     // {
