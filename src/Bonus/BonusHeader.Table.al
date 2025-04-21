@@ -23,6 +23,11 @@ table 65400 "MNB Bonus Header"
         {
             DataClassification = CustomerContent;
             Caption = 'Starting Date';
+            trigger OnValidate()
+            begin
+                if "Ending Date" < "Starting Date" then
+                    "Ending Date" := "Starting Date";
+            end;
         }
         field(4; "Ending Date"; Date)
         {
