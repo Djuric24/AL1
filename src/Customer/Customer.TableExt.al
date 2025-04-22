@@ -12,7 +12,7 @@ tableextension 65400 "MNB Customer" extends Customer
     }
     trigger OnBeforeDelete()
     begin
-        TestBonusExists();
+        TestIfBonusExists();
     end;
 
     var
