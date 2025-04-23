@@ -18,6 +18,10 @@ table 65400 "MNB Bonus Header"
             DataClassification = CustomerContent;
             Caption = 'Customer No.';
             TableRelation = Customer;
+            trigger OnValidate()
+            begin
+                TestStatus();
+            end;
         }
         field(3; "Starting Date"; Date)
         {
@@ -74,12 +78,21 @@ table 65400 "MNB Bonus Header"
 
     trigger OnDelete()
     begin
-
+        TestStatus();
     end;
 
     trigger OnRename()
     begin
 
+    end;
+
+    var
+        StatusCannotBeReleasedErr: Label 'Status cannot be %1.', Comment = '%1 status field value';
+
+    local procedure TestStatus()
+    begin
+        if Status = Status::Released then
+            Error(StatusCannotBeReleasedErr, Status);
     end;
 
 }
