@@ -29,6 +29,7 @@ table 65400 "MNB Bonus Header"
             Caption = 'Starting Date';
             trigger OnValidate()
             begin
+                TestStatus();
                 if "Ending Date" < "Starting Date" then
                     "Ending Date" := "Starting Date";
             end;
@@ -39,6 +40,7 @@ table 65400 "MNB Bonus Header"
             Caption = 'Ending Date';
             trigger OnValidate()
             begin
+                TestStatus();
                 if "Ending Date" < "Starting Date" then
                     "Starting Date" := "Ending Date"
             end;
