@@ -81,6 +81,7 @@ table 65400 "MNB Bonus Header"
     trigger OnDelete()
     begin
         TestStatus();
+        DeleteLines();
     end;
 
     trigger OnRename()
@@ -97,4 +98,11 @@ table 65400 "MNB Bonus Header"
             Error(StatusCannotBeReleasedErr, Status);
     end;
 
+    local procedure DeleteLines()
+    var
+        BonusLine: Record "MNB Bonus Line";
+    begin
+        BonusLine.SetRange("Document No.", "No.");
+        BonusLine.DeleteAll();
+    end;
 }
