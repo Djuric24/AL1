@@ -2,6 +2,8 @@ table 65402 "MNB Bonus Entry"
 {
     DataClassification = CustomerContent;
     Caption = 'Bonus Entry';
+    LookupPageId = "MNB Bonus Entries";
+    DrillDownPageId = "MNB Bonus Entries";
 
     fields
     {

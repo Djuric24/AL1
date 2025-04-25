@@ -14,30 +14,56 @@ page 65403 "MNB Bonus Entries"
     {
         area(Content)
         {
-            group(GroupName)
+            repeater(Control1)
             {
-                field(Name; NameSource)
+                field("Posting Date"; Rec."Posting Date")
                 {
-
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies sales invoice posting date.';
+                }
+                field("Bonus No."; Rec."Bonus No.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies Bonus number.';
+                }
+                field("Document No."; Rec."Document No.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies sales invoice number.';
+                }
+                field("Item No."; Rec."Item No.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies item number.';
+                }
+                field("Bonus Amount"; Rec."Bonus Amount")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies calculated bonus amount.';
+                }
+                field("Entry No."; Rec."Entry No.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies entry number for the ledger.';
                 }
             }
         }
     }
 
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
+    // actions
+    // {
+    //     area(Processing)
+    //     {
+    //         action(ActionName)
+    //         {
 
-                trigger OnAction()
-                begin
+    //             trigger OnAction()
+    //             begin
 
-                end;
-            }
-        }
-    }
+    //             end;
+    //         }
+    //     }
+    // }
 
     // var
     //     myInt: Integer;
