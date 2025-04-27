@@ -49,22 +49,4 @@ page 65403 "MNB Bonus Entries"
             }
         }
     }
-
-    // actions
-    // {
-    //     area(Processing)
-    //     {
-    //         action(ActionName)
-    //         {
-
-    //             trigger OnAction()
-    //             begin
-
-    //             end;
-    //         }
-    //     }
-    // }
-
-    // var
-    //     myInt: Integer;
 }

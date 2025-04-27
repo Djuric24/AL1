@@ -64,9 +64,6 @@ table 65402 "MNB Bonus Entry"
         // Add changes to field groups here
     }
 
-    // var
-    //     myInt: Integer;
-
     trigger OnInsert()
     begin
 
