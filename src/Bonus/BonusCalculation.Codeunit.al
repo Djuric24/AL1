@@ -58,5 +58,21 @@ codeunit 65400 "MNB Bonus Calculation"
         BonusEntry.Insert()
     end;
 
+    local procedure InsertBonusEntry(var BonusLine: Record "MNB Bonus Line"; var SalesInvLine: Record "Sales Invoice Line")
+    var
+        BonusEntry: Record "MNB Bonus Entry";
+    begin
+        BonusEntry.Init();
+        BonusEntry."Entry No." := 0;
+        BonusEntry."Bonus No." := BonusLine."Document No.";
+        BonusEntry."Document No." := SalesInvLine."Document No.";
+        BonusEntry."Item No." := SalesInvLine."No.";
+        BonusEntry."Posting Date" := SalesInvLine."Posting Date";
+        BonusEntry."Bonus Amount" := SalesInvLine."Line Amount" * BonusLine."Bonus Perc." / 100;
+        OnBeforeInsertBonusEntry(BonusLine, SalesInvLine);
+        BonusEntry.Insert();
+        OnAfterInsertBonusEntry(BonusLine, SalesInvLine);
+    end;
+
 }
 
